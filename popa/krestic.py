@@ -1,46 +1,68 @@
 import tkinter as tk
+from tkinter.constants import DISABLED
+
+
+def block_b():
+    b1.config(state=DISABLED)
+    b2.config(state=DISABLED)
+    b3.config(state=DISABLED)
+    b4.config(state=DISABLED)
+    b5.config(state=DISABLED)
+    b6.config(state=DISABLED)
+    b7.config(state=DISABLED)
+    b8.config(state=DISABLED)
+    b9.config(state=DISABLED)
 
 
 def b_winn():
+    global winner
     if b1["text"] == "X" and b2["text"] == "X" and b3["text"] == "X" or b1["text"] == "O" and b2["text"] == "O" and b3["text"] == "O":
         b1.config(bg="red")
         b2.config(bg="red")
         b3.config(bg="red")
+        block_b()
 
     elif b4["text"] == "X" and b5["text"] == "X" and b6["text"] == "X" or b4["text"] == "O" and b5["text"] == "O" and b6["text"] == "O":
         b4.config(bg="red")
         b5.config(bg="red")
         b6.config(bg="red")
+        block_b()
 
     elif b7["text"] == "X" and b8["text"] == "X" and b9["text"] == "X" or b7["text"] == "O" and b8["text"] == "O" and b9["text"] == "O":
         b7.config(bg="red")
         b8.config(bg="red")
         b9.config(bg="red")
+        block_b()
 
     elif b1["text"] == "X" and b4["text"] == "X" and b7["text"] == "X" or b1["text"] == "O" and b4["text"] == "O" and b7["text"] == "O":
         b1.config(bg="red")
         b4.config(bg="red")
         b7.config(bg="red")
+        block_b()
 
     elif b2["text"] == "X" and b5["text"] == "X" and b8["text"] == "X" or b2["text"] == "O" and b5["text"] == "O" and b8["text"] == "O":
         b2.config(bg="red")
         b5.config(bg="red")
         b8.config(bg="red")
+        block_b()
 
     elif b3["text"] == "X" and b6["text"] == "X" and b9["text"] == "X" or b3["text"] == "O" and b6["text"] == "O" and b9["text"] == "O":
         b3.config(bg="red")
         b6.config(bg="red")
         b9.config(bg="red")
+        block_b()
 
     elif b1["text"] == "X" and b5["text"] == "X" and b9["text"] == "X" or b1["text"] == "O" and b5["text"] == "O" and b9["text"] == "O":
         b1.config(bg="red")
         b5.config(bg="red")
         b9.config(bg="red")
+        block_b()
 
     elif b3["text"] == "X" and b5["text"] == "X" and b7["text"] == "X" or b3["text"] == "O" and b5["text"] == "O" and b7["text"] == "O":
         b3.config(bg="red")
         b5.config(bg="red")
         b7.config(bg="red")
+        block_b()
 
 
 def b_clicked(b):
@@ -60,6 +82,7 @@ def b_clicked(b):
         b_winn()
 
 clicked = True
+winner = False
 
 win = tk.Tk()
 win.geometry("510x550")
