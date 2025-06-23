@@ -73,7 +73,8 @@ def b_clicked(b):
         b.config(bg="blue")
         b_winn()
 
-    elif b["text"]==" " and clicked == False:
+    else:
+        b["text"]==" " and clicked == False
         b["text"] = "O"
         clicked = True
         b["state"] = tk.DISABLED
