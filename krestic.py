@@ -15,7 +15,6 @@ def block_b():
 
 
 def b_winn():
-    global winner
     if b1["text"] == "X" and b2["text"] == "X" and b3["text"] == "X" or b1["text"] == "O" and b2["text"] == "O" and b3["text"] == "O":
         b1.config(bg="red")
         b2.config(bg="red")
@@ -82,7 +81,6 @@ def b_clicked(b):
         b_winn()
 
 clicked = True
-winner = False
 
 win = tk.Tk()
 win.geometry("510x550")
